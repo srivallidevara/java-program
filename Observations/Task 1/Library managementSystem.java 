@@ -1,0 +1,125 @@
+import java.util.Scanner;
+
+public class LibraryManagementSystem {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String[] books = {
+            "Java",
+            "Python",
+            "Data Structures",
+            "Operating System",
+            "Computer Networks"
+        };
+
+        boolean[] issued = new boolean[5];
+
+        int choice;
+
+        System.out.println("================================");
+        System.out.println("    LIBRARY MANAGEMENT SYSTEM");
+        System.out.println("================================");
+
+        do {
+            System.out.println("\n1. Display Books");
+            System.out.println("2. Issue Book");
+            System.out.println("3. Return Book");
+            System.out.println("4. Search Book");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    System.out.println("\nAvailable Books:");
+
+                    for (int i = 0; i < books.length; i++) {
+
+                        System.out.print((i + 1) + ". " + books[i]);
+
+                        if (issued[i]) {
+                            System.out.println(" - Issued");
+                        } else {
+                            System.out.println(" - Available");
+                        }
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter book number: ");
+                    int issue = sc.nextInt();
+
+                    if (issue >= 1 && issue <= 5) {
+
+                        if (!issued[issue - 1]) {
+                            issued[issue - 1] = true;
+
+                            System.out.println("Book issued successfully.");
+                            System.out.println("Book: " + books[issue - 1]);
+                        } else {
+                            System.out.println("Book is already issued.");
+                        }
+
+                    } else {
+                        System.out.println("Invalid book number.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter book number: ");
+                    int returnBook = sc.nextInt();
+
+                    if (returnBook >= 1 && returnBook <= 5) {
+
+                        if (issued[returnBook - 1]) {
+                            issued[returnBook - 1] = false;
+
+                            System.out.println("Book returned successfully.");
+                            System.out.println("Book: " + books[returnBook - 1]);
+                        } else {
+                            System.out.println("Book was not issued.");
+                        }
+
+                    } else {
+                        System.out.println("Invalid book number.");
+                    }
+                    break;
+
+                case 4:
+                    sc.nextLine();
+
+                    System.out.print("Enter book name: ");
+                    String name = sc.nextLine();
+
+                    boolean found = false;
+
+                    for (int i = 0; i < books.length; i++) {
+
+                        if (books[i].equalsIgnoreCase(name)) {
+                            System.out.println("Book found: " + books[i]);
+                            found = true;
+                        }
+                    }
+
+                    if (!found) {
+                        System.out.println("Book not found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Thank you!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice.");
+            }
+
+        } while (choice != 5);
+
+        sc.close();
+    }
+}
