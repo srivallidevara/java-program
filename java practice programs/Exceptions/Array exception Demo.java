@@ -1,4 +1,3 @@
-```java
 class ArrayDemo {
 
     public static void main(String[] args) {
@@ -8,5 +7,5 @@ class ArrayDemo {
         System.out.println(marks[6]);
     }
 }
-```
+
 
