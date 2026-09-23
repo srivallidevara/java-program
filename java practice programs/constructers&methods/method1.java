@@ -1,3 +1,4 @@
+
 ```java
 class Student {
 
@@ -45,4 +46,39 @@ class Car {
     }
 }
 ```
+
+
+
+
+
+```java
+class Student {
+
+    String name;
+    int age;
+    String branch;
+
+    // Constructor
+    Student() {
+        name = "Srivalli";
+        age = 20;
+        branch = "CSM";
+    }
+
+    void display() {
+        System.out.println("Student Details");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Branch: " + branch);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.display();
+    }
+}
+```
+
 
