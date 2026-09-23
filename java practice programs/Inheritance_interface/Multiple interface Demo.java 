@@ -1,0 +1,33 @@
+```java
+interface Fruit {
+
+    void taste();
+}
+
+interface Color {
+
+    void showColor();
+}
+
+class Apple implements Fruit, Color {
+
+    public void taste() {
+        System.out.println("Apple is sweet");
+    }
+
+    public void showColor() {
+        System.out.println("Apple is red");
+    }
+}
+
+public class MultipleInterfaceDemo {
+
+    public static void main(String[] args) {
+
+        Apple a = new Apple();
+
+        a.taste();
+        a.showColor();
+    }
+}
+```
