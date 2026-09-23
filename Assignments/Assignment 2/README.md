@@ -1,0 +1,1 @@
+Basic interface Interface inheritance Multiple inheritance Multiple interface Multiple interface inheritance 
