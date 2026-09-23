@@ -1,1 +1,15 @@
-s
+```java id="x0f4sn"
+public class DoWhileDemo {
+
+    public static void main(String[] args) {
+
+        int i = 1;
+
+        do {
+            System.out.println("Welcome to Java");
+            i++;
+        } while(i <= 3);
+    }
+}
+```
+
