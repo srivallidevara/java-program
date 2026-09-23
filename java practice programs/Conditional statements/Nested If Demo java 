@@ -1,20 +1,27 @@
-public class VotingSystem {
-    public static void main(String[] args) {
-        int age = 20;
-        boolean hasVoterId = false;
+public class StudentSystem {
 
-        // Outer if: Checks age eligibility
+    public static void main(String[] args) {
+
+        int age = 20;
+        boolean hasIdCard = true;
+
         if (age >= 18) {
+
             System.out.println("You are an adult.");
 
-            // Inner if: Checks document availability
-            if (hasVoterId) {
-                System.out.println("You are eligible to vote!");
+            if (hasIdCard) {
+
+                System.out.println("You can enter the exam hall.");
+
             } else {
-                System.out.println("You are eligible, but please apply for a Voter ID card first.");
+
+                System.out.println("Please bring your ID card.");
             }
+
         } else {
-            System.out.println("You are a minor. Not eligible to vote.");
+
+            System.out.println("You are not eligible for the exam.");
         }
     }
 }
+
