@@ -1,1 +1,40 @@
-s
+public class StringMethods {
+
+    public static void main(String[] args) {
+
+        String name = "Java Programming";
+
+        // 1. Lowercase
+        System.out.println("Lowercase: " + name.toLowerCase());
+
+        // 2. Uppercase
+        System.out.println("Uppercase: " + name.toUpperCase());
+
+        // 3. Split
+        String[] words = name.split(" ");
+
+        System.out.println("Split:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+
+        // 4. Starts With
+        System.out.println("Starts with Java: "
+                + name.startsWith("Java"));
+
+        // 5. Substring
+        System.out.println("Substring: "
+                + name.substring(0, 4));
+
+        // 6. Index
+        System.out.println("Index of 'v': "
+                + name.indexOf("v"));
+
+        // 7. Case Conversion
+        System.out.println("Upper Case: "
+                + name.toUpperCase());
+
+        System.out.println("Lower Case: "
+                + name.toLowerCase());
+    }
+}
