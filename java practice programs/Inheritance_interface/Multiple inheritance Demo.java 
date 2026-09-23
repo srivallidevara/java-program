@@ -1,0 +1,33 @@
+```java
+interface Fruit {
+
+    void taste();
+}
+
+interface Sweet {
+
+    void type();
+}
+
+class Apple implements Fruit, Sweet {
+
+    public void taste() {
+        System.out.println("Apple is tasty");
+    }
+
+    public void type() {
+        System.out.println("Apple is sweet");
+    }
+}
+
+public class MultipleDemo {
+
+    public static void main(String[] args) {
+
+        Apple a = new Apple();
+
+        a.taste();
+        a.type();
+    }
+}
+```
