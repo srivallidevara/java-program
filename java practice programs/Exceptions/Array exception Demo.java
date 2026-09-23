@@ -3,9 +3,10 @@ class ArrayDemo {
 
     public static void main(String[] args) {
 
-        int[] numbers = {10, 20, 30};
+        int[] marks = {85, 72, 91, 68};
 
-        System.out.println(numbers[5]);
+        System.out.println(marks[6]);
     }
 }
 ```
+
