@@ -1,0 +1,15 @@
+public class TemperatureDemo {
+
+    public static void main(String[] args) {
+
+        int temperature = 25;
+
+        if(temperature >= 30) {
+            System.out.println("Hot");
+        }
+        else {
+            System.out.println("Normal");
+        }
+    }
+}
+
