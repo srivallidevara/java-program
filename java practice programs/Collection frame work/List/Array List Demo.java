@@ -1,24 +1,23 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
-public class LinkedListExample {
+public class ArrayListExample {
 
     public static void main(String[] args) {
 
-        LinkedList<String> food = new LinkedList<>();
+        ArrayList<String> chocolates = new ArrayList<>();
 
-        food.add("Biryani");
-        food.add("Chicken");
-        food.add("Ice Cream");
+        chocolates.add("Dairy Milk");
+        chocolates.add("KitKat");
+        chocolates.add("5 Star");
 
-        System.out.println("Food List: " + food);
+        System.out.println("Chocolate List: " + chocolates);
 
-        food.addFirst("Starter");
-        food.addLast("Chocolate");
+        chocolates.add("Perk");
 
-        System.out.println("After adding: " + food);
+        System.out.println("After adding: " + chocolates);
 
-        food.remove("Chicken");
+        chocolates.remove("KitKat");
 
-        System.out.println("After removing: " + food);
+        System.out.println("After removing: " + chocolates);
     }
 }
