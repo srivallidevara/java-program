@@ -1,0 +1,112 @@
+// Interface
+interface Reservable {
+    void reserveBook();
+}
+
+// Base class
+class Library {
+    String libraryName;
+
+    Library(String libraryName) {
+        this.libraryName = libraryName;
+    }
+
+    void display() {
+        System.out.println("Library: " + libraryName);
+    }
+}
+
+// Inheritance + Interface
+class Book extends Library implements Reservable {
+
+    private int bookId;
+    private String title;
+    private double price;
+
+    // Default constructor
+    Book() {
+        super("City Library");
+        bookId = 0;
+        title = "Unknown";
+        price = 0;
+    }
+
+    // Parameterized constructor
+    Book(int bookId, String title, double price) {
+        super("City Library");
+        this.bookId = bookId;
+        this.title = title;
+        this.price = price;
+    }
+
+    // Encapsulation
+    void setPrice(double price) {
+        this.price = price;
+    }
+
+    double getPrice() {
+        return price;
+    }
+
+    // Method Overriding
+    @Override
+    void display() {
+        System.out.println("Book ID : " + bookId);
+        System.out.println("Title   : " + title);
+        System.out.println("Price   : " + price);
+    }
+
+    // Interface method
+    public void reserveBook() {
+        System.out.println("Book reserved successfully.");
+    }
+
+    // Method Overloading
+    void searchBook(String title) {
+        System.out.println("Searching book: " + title);
+    }
+
+    void searchBook(int bookId) {
+        System.out.println("Searching book ID: " + bookId);
+    }
+}
+
+// Abstraction
+abstract class LibraryService {
+    abstract void service();
+}
+
+class ReturnService extends LibraryService {
+
+    void service() {
+        System.out.println("Book return service");
+    }
+}
+
+// Main class
+public class LibraryManagementSystem {
+
+    public static void main(String[] args) {
+
+        // Class and Object
+        Book book = new Book(201, "Java Basics", 400);
+
+        // Display book details
+        book.display();
+
+        // Encapsulation
+        book.setPrice(450);
+        System.out.println("Updated Price: " + book.getPrice());
+
+        // Method Overloading
+        book.searchBook("Java Basics");
+        book.searchBook(201);
+
+        // Interface
+        book.reserveBook();
+
+        // Abstraction
+        LibraryService service = new ReturnService();
+        service.service();
+    }
+}
