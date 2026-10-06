@@ -1,0 +1,88 @@
+
+#include <stdio.h>
+#define SIZE 10
+
+int hash[SIZE];
+
+void insert(int key) {
+    int i, index, probes = 0;
+
+    index = key % SIZE;
+
+    for (i = 0; i < SIZE; i++) {
+        probes++;
+        if (hash[(index + i) % SIZE] == -1) {
+            hash[(index + i) % SIZE] = key;
+            printf("Inserted %d, Probes = %d\n",
+                   key, probes);
+            return;
+        }
+    }
+
+    printf("Hash table is full\n");
+}
+
+void search(int key) {
+    int i, index;
+
+    index = key % SIZE;
+
+    for (i = 0; i < SIZE; i++) {
+        int pos = (index + i) % SIZE;
+
+        if (hash[pos] == key) {
+            printf("Key found at index %d\n", pos);
+            return;
+        }
+
+        if (hash[pos] == -1)
+            break;
+    }
+
+    printf("Key not found\n");
+}
+
+void display() {
+    int i;
+
+    printf("\nHash Table:\n");
+    for (i = 0; i < SIZE; i++) {
+        printf("%d : %d\n", i, hash[i]);
+    }
+}
+
+int main() {
+    int i;
+
+    for (i = 0; i < SIZE; i++)
+        hash[i] = -1;
+
+    insert(10);
+    insert(20);
+    insert(15);
+    insert(25);
+
+    display();
+
+    search(25);
+
+    return 0;
+}
+output
+Inserted 10, Probes = 1
+Inserted 20, Probes = 2
+Inserted 15, Probes = 1
+Inserted 25, Probes = 3
+
+Hash Table:
+0 : 10
+1 : 20
+2 : 25
+3 : 15
+4 : -1
+5 : -1
+6 : -1
+7 : -1
+8 : -1
+9 : -1
+Key found at index 2
