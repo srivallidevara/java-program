@@ -1,0 +1,38 @@
+class FarmAnimal {
+
+    void eat() {
+        System.out.println("Farm animal eats food");
+    }
+
+    void sound() {
+        System.out.println("Farm animal makes a sound");
+    }
+}
+
+class Cow extends FarmAnimal {
+
+    void sound() {
+        System.out.println("Cow says: Moo");
+    }
+}
+
+class Goat extends FarmAnimal {
+
+    void sound() {
+        System.out.println("Goat says: Meh");
+    }
+}
+
+public class FarmAnimalExample {
+    public static void main(String[] args) {
+
+        Cow c = new Cow();
+        Goat g = new Goat();
+
+        c.eat();
+        c.sound();
+
+        g.eat();
+        g.sound();
+    }
+}
