@@ -1,0 +1,25 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class DequeExample {
+    public static void main(String[] args) {
+
+        Deque<String> orders = new ArrayDeque<>();
+
+        // Adding orders
+        orders.addFirst("Coffee");
+        orders.addLast("Burger");
+        orders.addFirst("Tea");
+        orders.addLast("Pizza");
+
+        System.out.println("Café Orders: " + orders);
+
+        // Remove order from front
+        System.out.println("Completed Order: " + orders.removeFirst());
+
+        // Remove order from rear
+        System.out.println("Cancelled Order: " + orders.removeLast());
+
+        System.out.println("Remaining Orders: " + orders);
+    }
+}
