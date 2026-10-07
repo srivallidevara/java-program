@@ -1,0 +1,23 @@
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+
+        Stack<String> actions = new Stack<>();
+
+        actions.push("Type Text");
+        actions.push("Add Image");
+        actions.push("Change Font");
+        actions.push("Save File");
+
+        System.out.println("Actions: " + actions);
+
+        // View top action
+        System.out.println("Last Action: " + actions.peek());
+
+        // Undo last action
+        System.out.println("Undo Action: " + actions.pop());
+
+        System.out.println("Remaining Actions: " + actions);
+    }
+}
