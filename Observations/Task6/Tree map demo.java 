@@ -1,0 +1,27 @@
+import java.util.TreeMap;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+
+        TreeMap<Integer, String> employees = new TreeMap<>();
+
+        employees.put(104, "HR");
+        employees.put(101, "CSE");
+        employees.put(103, "Finance");
+        employees.put(102, "Marketing");
+
+        System.out.println("Employee Details: " + employees);
+
+        // Get department of employee
+        System.out.println("Department of Employee 103: "
+                + employees.get(103));
+
+        // First key
+        System.out.println("First Employee ID: "
+                + employees.firstKey());
+
+        // Last key
+        System.out.println("Last Employee ID: "
+                + employees.lastKey());
+    }
+}
