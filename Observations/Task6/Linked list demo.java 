@@ -1,0 +1,31 @@
+import java.util.LinkedList;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+
+        LinkedList<String> stops = new LinkedList<>();
+
+        stops.add("Railway Station");
+        stops.add("Market");
+        stops.add("College");
+        stops.add("Bus Stand");
+
+        System.out.println("Bus Stops: " + stops);
+
+        // Add a stop at the beginning
+        stops.addFirst("Airport");
+
+        // Add a stop at the end
+        stops.addLast("Hospital");
+
+        System.out.println("Updated Bus Stops: " + stops);
+
+        // Remove a stop
+        stops.remove("Market");
+
+        System.out.println("After Removal: " + stops);
+
+        // Display first stop
+        System.out.println("First Stop: " + stops.getFirst());
+    }
+}
