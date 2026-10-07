@@ -1,0 +1,28 @@
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class SortedMapExample {
+    public static void main(String[] args) {
+
+        SortedMap<String, String> flights = new TreeMap<>();
+
+        flights.put("HYD101", "06:30 AM");
+        flights.put("VJA205", "08:00 AM");
+        flights.put("DEL310", "10:15 AM");
+        flights.put("BLR415", "07:45 AM");
+
+        System.out.println("Flight Schedule: " + flights);
+
+        // Getting value using key
+        System.out.println("Departure of VJA205: "
+                + flights.get("VJA205"));
+
+        // First key
+        System.out.println("First Flight: "
+                + flights.firstKey());
+
+        // Last key
+        System.out.println("Last Flight: "
+                + flights.lastKey());
+    }
+}
