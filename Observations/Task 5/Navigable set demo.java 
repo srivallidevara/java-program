@@ -1,0 +1,29 @@
+import java.util.NavigableSet;
+import java.util.TreeSet;
+
+public class NavigableSetExample {
+    public static void main(String[] args) {
+
+        NavigableSet<Integer> temperatures = new TreeSet<>();
+
+        temperatures.add(32);
+        temperatures.add(28);
+        temperatures.add(35);
+        temperatures.add(30);
+        temperatures.add(25);
+
+        System.out.println("Temperatures: " + temperatures);
+
+        System.out.println("Lowest Temperature: "
+                + temperatures.first());
+
+        System.out.println("Highest Temperature: "
+                + temperatures.last());
+
+        System.out.println("Temperature below 32: "
+                + temperatures.lower(32));
+
+        System.out.println("Temperature above 32: "
+                + temperatures.higher(32));
+    }
+}
