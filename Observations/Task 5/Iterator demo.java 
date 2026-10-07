@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorExample {
+    public static void main(String[] args) {
+
+        ArrayList<String> movies = new ArrayList<>();
+
+        movies.add("Pushpa");
+        movies.add("Jersey");
+        movies.add("Sita Ramam");
+        movies.add("Hi Nanna");
+
+        Iterator<String> it = movies.iterator();
+
+        System.out.println("My Watchlist:");
+
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
+}
