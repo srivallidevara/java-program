@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+
+        ArrayList<String> items = new ArrayList<>();
+
+        // Adding items
+        items.add("Rice");
+        items.add("Milk");
+        items.add("Bread");
+        items.add("Eggs");
+
+        System.out.println("Shopping List: " + items);
+
+        // Accessing an item
+        System.out.println("First Item: " + items.get(0));
+
+        // Updating an item
+        items.set(2, "Biscuits");
+
+        System.out.println("Updated List: " + items);
+
+        // Removing an item
+        items.remove("Milk");
+
+        System.out.println("After Removal: " + items);
+
+        // Size
+        System.out.println("Total Items: " + items.size());
+    }
+}
