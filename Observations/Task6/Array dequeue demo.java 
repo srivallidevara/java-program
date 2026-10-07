@@ -1,0 +1,30 @@
+import java.util.ArrayDeque;
+
+public class ArrayDequeExample {
+    public static void main(String[] args) {
+
+        ArrayDeque<String> passengers = new ArrayDeque<>();
+
+        // Adding passengers
+        passengers.add("Ravi");
+        passengers.add("Anu");
+        passengers.add("Kiran");
+
+        System.out.println("Passengers: " + passengers);
+
+        // Add VIP passenger at front
+        passengers.addFirst("VIP");
+
+        System.out.println("After adding VIP: " + passengers);
+
+        // Remove passenger from front
+        System.out.println("Boarded Passenger: "
+                + passengers.removeFirst());
+
+        // Remove passenger from rear
+        System.out.println("Removed from Rear: "
+                + passengers.removeLast());
+
+        System.out.println("Remaining Passengers: " + passengers);
+    }
+}
