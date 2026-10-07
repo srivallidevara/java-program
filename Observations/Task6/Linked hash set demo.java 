@@ -1,0 +1,25 @@
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetExample {
+    public static void main(String[] args) {
+
+        LinkedHashSet<String> tasks = new LinkedHashSet<>();
+
+        tasks.add("Study Java");
+        tasks.add("Complete Assignment");
+        tasks.add("Practice Coding");
+        tasks.add("Read Notes");
+        tasks.add("Study Java");
+
+        System.out.println("Daily Tasks: " + tasks);
+
+        // Checking a task
+        System.out.println("Is Coding Practice Available? "
+                + tasks.contains("Practice Coding"));
+
+        // Removing a task
+        tasks.remove("Read Notes");
+
+        System.out.println("After Removal: " + tasks);
+    }
+}
