@@ -1,0 +1,24 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+
+        Queue<String> patients = new LinkedList<>();
+
+        patients.add("Ravi");
+        patients.add("Anu");
+        patients.add("Kiran");
+        patients.add("Priya");
+
+        System.out.println("Patient Queue: " + patients);
+
+        // First patient
+        System.out.println("Next Patient: " + patients.peek());
+
+        // Removing first patient
+        System.out.println("Consulted Patient: " + patients.poll());
+
+        System.out.println("Remaining Patients: " + patients);
+    }
+}
