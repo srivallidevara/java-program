@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class BankInterest {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Principal Amount: ");
+        double principal = sc.nextDouble();
+
+        System.out.print("Enter Rate of Interest: ");
+        double rate = sc.nextDouble();
+
+        System.out.print("Enter Time in Years: ");
+        double time = sc.nextDouble();
+
+        double interest = (principal * rate * time) / 100;
+
+        double totalAmount = principal + interest;
+
+        System.out.println("Interest: " + interest);
+        System.out.println("Total Amount: " + totalAmount);
+
+        sc.close();
+    }
+}
