@@ -1,0 +1,32 @@
+class DigitalPayment {
+    String name;
+    double balance;
+
+    DigitalPayment(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+    }
+
+    void pay(double amount) {
+        if (amount <= balance) {
+            balance = balance - amount;
+
+            System.out.println("Payment Successful");
+            System.out.println("Customer Name: " + name);
+            System.out.println("Paid Amount: " + amount);
+            System.out.println("Remaining Balance: " + balance);
+        } else {
+            System.out.println("Payment Failed");
+            System.out.println("Insufficient Balance");
+        }
+    }
+}
+
+public class DigitalPaymentProgram {
+    public static void main(String[] args) {
+
+        DigitalPayment d = new DigitalPayment("Anu", 5000);
+
+        d.pay(1500);
+    }
+}
