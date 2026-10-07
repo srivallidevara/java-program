@@ -1,0 +1,25 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetExample {
+    public static void main(String[] args) {
+
+        Set<String> bookCodes = new HashSet<>();
+
+        bookCodes.add("BK101");
+        bookCodes.add("BK205");
+        bookCodes.add("BK310");
+        bookCodes.add("BK101");
+
+        System.out.println("Book Codes: " + bookCodes);
+
+        // Checking an element
+        System.out.println("Is BK205 available? "
+                + bookCodes.contains("BK205"));
+
+        // Removing an element
+        bookCodes.remove("BK310");
+
+        System.out.println("After Removal: " + bookCodes);
+    }
+}
