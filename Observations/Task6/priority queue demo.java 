@@ -1,0 +1,23 @@
+import java.util.PriorityQueue;
+
+public class PriorityQueueExample {
+    public static void main(String[] args) {
+
+        PriorityQueue<Integer> tickets = new PriorityQueue<>();
+
+        tickets.add(40);
+        tickets.add(10);
+        tickets.add(30);
+        tickets.add(20);
+
+        System.out.println("Ticket Priorities: " + tickets);
+
+        // Highest priority = smallest number
+        System.out.println("Next Ticket: " + tickets.peek());
+
+        // Removing the highest priority ticket
+        System.out.println("Completed Ticket: " + tickets.poll());
+
+        System.out.println("Remaining Tickets: " + tickets);
+    }
+}
