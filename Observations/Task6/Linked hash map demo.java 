@@ -1,0 +1,26 @@
+import java.util.LinkedHashMap;
+
+public class LinkedHashMapExample {
+    public static void main(String[] args) {
+
+        LinkedHashMap<String, Double> restaurants = new LinkedHashMap<>();
+
+        restaurants.put("Spice Garden", 4.5);
+        restaurants.put("Food Corner", 4.2);
+        restaurants.put("Tasty Hub", 4.7);
+        restaurants.put("Urban Bites", 4.3);
+
+        System.out.println("Restaurant Ratings:");
+        System.out.println(restaurants);
+
+        // Getting rating
+        System.out.println("Rating of Tasty Hub: "
+                + restaurants.get("Tasty Hub"));
+
+        // Removing an entry
+        restaurants.remove("Food Corner");
+
+        System.out.println("After Removal:");
+        System.out.println(restaurants);
+    }
+}
