@@ -1,0 +1,20 @@
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
+public class FileNotFoundExample {
+    public static void main(String[] args) {
+
+        try {
+            FileReader file = new FileReader("student.txt");
+
+            System.out.println("File opened successfully");
+            file.close();
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
+        catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
